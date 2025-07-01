@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Room Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Group Study Room Booking</h1>
+    <form action="/book" method="POST">
+        <input name="name" placeholder="Your Name" required />
+        <select name="room">
+            <option value="Room A">Room A</option>
+            <option value="Room B">Room B</option>
+            <option value="Room C">Room C</option>
+        </select>
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+        <button type="submit">Book Room</button>
+    </form>
+
+    <h2>Existing Bookings</h2>
+    <ul>
+        {% for b in bookings %}
+        <li>{{ b.room }} - {{ b.date }} at {{ b.time }} (by {{ b.name }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
