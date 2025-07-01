@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: lightskyblue;
+}
+form {
+    margin-bottom: 20px;
+}
+input, select, button {
+    margin: 5px;
+    padding: 8px;
+}
+ul {
+    background:whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+}
